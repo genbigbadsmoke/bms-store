@@ -51,7 +51,7 @@ import {
         }
       };
       fetchData();
-    }, []);
+    }, [slug, state]);
   
     const addToCartHandler = async () => {
       const existItem = cart.cartItems.find((x) => x._id === product._id);
