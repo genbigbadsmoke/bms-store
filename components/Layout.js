@@ -141,6 +141,14 @@ export default function Layout({ title, description, children }) {
         <AppBar position='static' sx={classes.appbar}>
           <Toolbar sx={classes.toolbar}>
             <Box display='flex' alignItems='center'>
+              <IconButton
+                edge='start'
+                aria-label='open drawer'
+                onClick={sidebarOpenHandler}
+                sx={classes.menuButton}
+              >
+                <MenuIcon sx={classes.navbarButton} />
+              </IconButton>
               <NextLink href='/' passHref>
                 <Link>
                   <Typography sx={classes.brand}>BMS</Typography>
@@ -148,20 +156,20 @@ export default function Layout({ title, description, children }) {
               </NextLink>
             </Box>
             <Drawer
-              anchor="left"
+              anchor='left'
               open={sidbarVisible}
               onClose={sidebarCloseHandler}
             >
               <List>
                 <ListItem>
                   <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-between"
+                    display='flex'
+                    alignItems='center'
+                    justifyContent='space-between'
                   >
                     <Typography>Category</Typography>
                     <IconButton
-                      aria-label="close"
+                      aria-label='close'
                       onClick={sidebarCloseHandler}
                     >
                       <CancelIcon />
@@ -177,7 +185,7 @@ export default function Layout({ title, description, children }) {
                   >
                     <ListItem
                       button
-                      component="a"
+                      component='a'
                       onClick={sidebarCloseHandler}
                     >
                       <ListItemText primary={category}></ListItemText>
@@ -205,12 +213,13 @@ export default function Layout({ title, description, children }) {
                 </Box>
               </form>
             </Box>
+
             <Box>
               <Switch
                 checked={darkMode}
                 onChange={darkModeChangeHandler}
               ></Switch>
-              <NextLink href='cart' passHref>
+              <NextLink href='/cart' passHref>
                 <Link>
                   {cart.cartItems.length > 0 ? (
                     <Badge
@@ -268,7 +277,7 @@ export default function Layout({ title, description, children }) {
           {children}
         </Container>
         <Box component='footer' sx={classes.footer}>
-          <Typography>All rights reserved. BMS Store</Typography>
+          <Typography>All rights reserved. Sanity Amazona.</Typography>
         </Box>
       </ThemeProvider>
     </>
