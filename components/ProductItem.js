@@ -1,4 +1,4 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Rating, Typography } from '@mui/material'
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material'
 import NextLink from 'next/link'
 import React from 'react'
 import { urlForThumbnail } from '../utils/image'
