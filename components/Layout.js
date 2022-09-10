@@ -277,7 +277,7 @@ export default function Layout({ title, description, children }) {
           {children}
         </Container>
         <Box component='footer' sx={classes.footer}>
-          <Typography>All rights reserved. Sanity Amazona.</Typography>
+          <Typography>All rights reserved. BlackMen Shoes.</Typography>
         </Box>
       </ThemeProvider>
     </>
