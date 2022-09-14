@@ -25,5 +25,10 @@
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
     }
-  ]
+  ],
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check",
+    "build": "sanity build public -y"
+  }
 }
