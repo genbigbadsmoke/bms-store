@@ -32,5 +32,6 @@
   "devDependencies": {
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5"
+    npm i -D @sanity/cli
   }
 }
